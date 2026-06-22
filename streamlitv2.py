@@ -3,13 +3,11 @@ import pandas as pd
 from sklearn.linear_model import LinearRegression
 import streamlit as st
 
-
 st.set_page_config(
     page_title="Store Profit Simulator",
     page_icon="📈",
     layout="wide"
 )
-
 
 st.markdown("""
     <style>
@@ -90,7 +88,8 @@ with st.sidebar:
     st.header("🛠️ Tuas Kebijakan")
     st.write("Sesuaikan variabel di bawah untuk melihat dampak terhadap profit.")
     
-    iklan_slider = st.slider("Anggaran Iklan (Juta)", 0, 100, 10, help="Total biaya pemasaran per bulan.")
+    # PERUBAHAN: Batas atas anggaran iklan diubah kembali menjadi 50 sesuai modul
+    iklan_slider = st.slider("Anggaran Iklan (Juta)", 0, 50, 10, help="Total biaya pemasaran per bulan.")
     diskon_slider = st.slider("Besaran Diskon (%)", 0, 50, 10, help="Rata-rata diskon yang diberikan ke pelanggan.")
     
     st.markdown("---")
